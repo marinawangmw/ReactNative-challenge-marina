@@ -1,30 +1,43 @@
-import * as React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import React, {useState} from 'react';
+import {StyleSheet, View} from 'react-native';
 import {NavigationScreenProp} from 'react-navigation';
-import {useDispatch, useSelector} from 'react-redux';
-
-import {RootState} from '../redux/root-reducer';
-import {setFilterAction} from '../redux/searcher/searcher.actions';
+import InputField from '../components/inputField/InputField';
+import {Filter} from '../types/types';
+import CollectionListContainer from '../components/collectionList/CollectionList.Container';
 
 interface SearchScreenProps {
   navigation: NavigationScreenProp<any>;
-  route: any;
 }
 
-const SearchScreen = (props: SearchScreenProps) => {
-  const dispatch = useDispatch();
-  const filter = props.navigation.getParam('filter');
-  dispatch(setFilterAction(filter));
+const SearchScreen = ({navigation}: SearchScreenProps) => {
+  const filter: Filter = navigation.getParam('filter');
+  const [inputName, setInputName] = useState('');
+  const [inputType, setInputType] = useState('');
 
   return (
-    <View style={styles.container}>
-      <Text>{filter}</Text>
-      <Button
-        title="Details"
-        onPress={() => {
-          props.navigation.navigate('ItemDetails');
-        }}
-      />
+    <View style={styles.screen}>
+      <View style={styles.inputContainer}>
+        <InputField
+          filter={filter}
+          placeholder="Search by name"
+          input={inputName}
+          handleInputChange={setInputName}
+        />
+        <InputField
+          filter={filter}
+          placeholder="Search by type"
+          input={inputType}
+          handleInputChange={setInputType}
+        />
+      </View>
+      <View style={styles.collectionContainer}>
+        <CollectionListContainer
+          inputName={inputName || ''}
+          inputType={inputType || ''}
+          filter={filter}
+          navigation={navigation}
+        />
+      </View>
     </View>
   );
 };
@@ -32,5 +45,17 @@ const SearchScreen = (props: SearchScreenProps) => {
 export default SearchScreen;
 
 const styles = StyleSheet.create({
-  container: {},
+  screen: {
+    flex: 1,
+  },
+  inputContainer: {
+    paddingTop: 15,
+    paddingHorizontal: 20,
+    flex: 1,
+    width: '100%',
+  },
+  collectionContainer: {
+    flex: 4.2,
+    width: '100%',
+  },
 });

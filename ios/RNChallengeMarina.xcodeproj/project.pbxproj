@@ -11,15 +11,15 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2435B1C162D2C97249A43511 /* libPods-RNChallengeMarina-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 648F7E3FF4B7D30E7AB14BAF /* libPods-RNChallengeMarina-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* RNChallengeMarinaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNChallengeMarinaTests.m */; };
+		566BB04839559F634958E886 /* libPods-RNChallengeMarina-RNChallengeMarinaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C94FF2BEDFE293EB22EAE18E /* libPods-RNChallengeMarina-RNChallengeMarinaTests.a */; };
+		5971C40516127F0775B0DA52 /* libPods-RNChallengeMarina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFA126F5876B58B4C226D31 /* libPods-RNChallengeMarina.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		96CE96043545C89BDCB7FCA8 /* libPods-RNChallengeMarina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CF0310F32B25BF2B16896C /* libPods-RNChallengeMarina.a */; };
-		A41D52D53FD751A8DDD22C30 /* libPods-RNChallengeMarina-RNChallengeMarinaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A202E1864234D054F46A13D3 /* libPods-RNChallengeMarina-RNChallengeMarinaTests.a */; };
-		A7ED04D307973E87016CF46A /* libPods-RNChallengeMarina-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B484BD60BBD5EE52572E1E83 /* libPods-RNChallengeMarina-tvOS.a */; };
-		FD5BA5A3693EEA6D18B5A742 /* libPods-RNChallengeMarina-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB82823CCC99B384A209F0C /* libPods-RNChallengeMarina-tvOSTests.a */; };
+		F70ADFE14F110EDFFCE9A918 /* libPods-RNChallengeMarina-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A780D7A688D2F776207321 /* libPods-RNChallengeMarina-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		00E356EE1AD99517003FC87E /* RNChallengeMarinaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNChallengeMarinaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RNChallengeMarinaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNChallengeMarinaTests.m; sourceTree = "<group>"; };
-		0E13D6FAB7ED706262110DF8 /* Pods-RNChallengeMarina-RNChallengeMarinaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-RNChallengeMarinaTests.debug.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-RNChallengeMarinaTests/Pods-RNChallengeMarina-RNChallengeMarinaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RNChallengeMarina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNChallengeMarina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RNChallengeMarina/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RNChallengeMarina/AppDelegate.m; sourceTree = "<group>"; };
@@ -53,20 +52,21 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNChallengeMarina/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* RNChallengeMarina-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNChallengeMarina-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RNChallengeMarina-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNChallengeMarina-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		362DE6FDA9FAAEB9A78C78CF /* Pods-RNChallengeMarina-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-tvOS.release.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-tvOS/Pods-RNChallengeMarina-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		5DC5F48BA3FF2388F0B7A214 /* Pods-RNChallengeMarina-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-tvOSTests/Pods-RNChallengeMarina-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4DFA126F5876B58B4C226D31 /* libPods-RNChallengeMarina.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNChallengeMarina.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		648F7E3FF4B7D30E7AB14BAF /* libPods-RNChallengeMarina-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNChallengeMarina-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		730F7183C610CB5D0F4AD96C /* Pods-RNChallengeMarina-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-tvOSTests/Pods-RNChallengeMarina-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNChallengeMarina/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A0CF0310F32B25BF2B16896C /* libPods-RNChallengeMarina.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNChallengeMarina.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A202E1864234D054F46A13D3 /* libPods-RNChallengeMarina-RNChallengeMarinaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNChallengeMarina-RNChallengeMarinaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B484BD60BBD5EE52572E1E83 /* libPods-RNChallengeMarina-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNChallengeMarina-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9CC8C960E459E6805659347 /* Pods-RNChallengeMarina-RNChallengeMarinaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-RNChallengeMarinaTests.release.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-RNChallengeMarinaTests/Pods-RNChallengeMarina-RNChallengeMarinaTests.release.xcconfig"; sourceTree = "<group>"; };
-		B9E9DEC01E6850854BB80F27 /* Pods-RNChallengeMarina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina.debug.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina/Pods-RNChallengeMarina.debug.xcconfig"; sourceTree = "<group>"; };
-		CF0F00BCCF8D533D4D17F7C9 /* Pods-RNChallengeMarina-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-tvOSTests/Pods-RNChallengeMarina-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		D24AB87C1254A8692934C1CE /* Pods-RNChallengeMarina-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-tvOS/Pods-RNChallengeMarina-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		E1E0A9DF46663FAB78C2DC4E /* Pods-RNChallengeMarina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina.release.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina/Pods-RNChallengeMarina.release.xcconfig"; sourceTree = "<group>"; };
+		B9A780D7A688D2F776207321 /* libPods-RNChallengeMarina-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNChallengeMarina-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE63B443457479C6C17079B0 /* Pods-RNChallengeMarina-RNChallengeMarinaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-RNChallengeMarinaTests.release.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-RNChallengeMarinaTests/Pods-RNChallengeMarina-RNChallengeMarinaTests.release.xcconfig"; sourceTree = "<group>"; };
+		C137AADFE8AD9B953798A855 /* Pods-RNChallengeMarina-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-tvOSTests/Pods-RNChallengeMarina-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		C94FF2BEDFE293EB22EAE18E /* libPods-RNChallengeMarina-RNChallengeMarinaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNChallengeMarina-RNChallengeMarinaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCEC2C2DCE322AD71BB73268 /* Pods-RNChallengeMarina-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-tvOS/Pods-RNChallengeMarina-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D38CFA82AAF7782A0855DAEA /* Pods-RNChallengeMarina-RNChallengeMarinaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-RNChallengeMarinaTests.debug.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-RNChallengeMarinaTests/Pods-RNChallengeMarina-RNChallengeMarinaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3598745C1E6CD8322A0BA74 /* Pods-RNChallengeMarina-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina-tvOS.release.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina-tvOS/Pods-RNChallengeMarina-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		EABDD7514C159F96C354E469 /* Pods-RNChallengeMarina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina.release.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina/Pods-RNChallengeMarina.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		FFB82823CCC99B384A209F0C /* libPods-RNChallengeMarina-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNChallengeMarina-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD2FADBAC9D65DC060E5EF67 /* Pods-RNChallengeMarina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNChallengeMarina.debug.xcconfig"; path = "Target Support Files/Pods-RNChallengeMarina/Pods-RNChallengeMarina.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A41D52D53FD751A8DDD22C30 /* libPods-RNChallengeMarina-RNChallengeMarinaTests.a in Frameworks */,
+				566BB04839559F634958E886 /* libPods-RNChallengeMarina-RNChallengeMarinaTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96CE96043545C89BDCB7FCA8 /* libPods-RNChallengeMarina.a in Frameworks */,
+				5971C40516127F0775B0DA52 /* libPods-RNChallengeMarina.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7ED04D307973E87016CF46A /* libPods-RNChallengeMarina-tvOS.a in Frameworks */,
+				F70ADFE14F110EDFFCE9A918 /* libPods-RNChallengeMarina-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5BA5A3693EEA6D18B5A742 /* libPods-RNChallengeMarina-tvOSTests.a in Frameworks */,
+				2435B1C162D2C97249A43511 /* libPods-RNChallengeMarina-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,25 +141,25 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				A0CF0310F32B25BF2B16896C /* libPods-RNChallengeMarina.a */,
-				A202E1864234D054F46A13D3 /* libPods-RNChallengeMarina-RNChallengeMarinaTests.a */,
-				B484BD60BBD5EE52572E1E83 /* libPods-RNChallengeMarina-tvOS.a */,
-				FFB82823CCC99B384A209F0C /* libPods-RNChallengeMarina-tvOSTests.a */,
+				4DFA126F5876B58B4C226D31 /* libPods-RNChallengeMarina.a */,
+				C94FF2BEDFE293EB22EAE18E /* libPods-RNChallengeMarina-RNChallengeMarinaTests.a */,
+				B9A780D7A688D2F776207321 /* libPods-RNChallengeMarina-tvOS.a */,
+				648F7E3FF4B7D30E7AB14BAF /* libPods-RNChallengeMarina-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5AFF26180504915B22D5BAB5 /* Pods */ = {
+		71D2E5913AEFF921E301F9F8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B9E9DEC01E6850854BB80F27 /* Pods-RNChallengeMarina.debug.xcconfig */,
-				E1E0A9DF46663FAB78C2DC4E /* Pods-RNChallengeMarina.release.xcconfig */,
-				0E13D6FAB7ED706262110DF8 /* Pods-RNChallengeMarina-RNChallengeMarinaTests.debug.xcconfig */,
-				B9CC8C960E459E6805659347 /* Pods-RNChallengeMarina-RNChallengeMarinaTests.release.xcconfig */,
-				D24AB87C1254A8692934C1CE /* Pods-RNChallengeMarina-tvOS.debug.xcconfig */,
-				362DE6FDA9FAAEB9A78C78CF /* Pods-RNChallengeMarina-tvOS.release.xcconfig */,
-				5DC5F48BA3FF2388F0B7A214 /* Pods-RNChallengeMarina-tvOSTests.debug.xcconfig */,
-				CF0F00BCCF8D533D4D17F7C9 /* Pods-RNChallengeMarina-tvOSTests.release.xcconfig */,
+				FD2FADBAC9D65DC060E5EF67 /* Pods-RNChallengeMarina.debug.xcconfig */,
+				EABDD7514C159F96C354E469 /* Pods-RNChallengeMarina.release.xcconfig */,
+				D38CFA82AAF7782A0855DAEA /* Pods-RNChallengeMarina-RNChallengeMarinaTests.debug.xcconfig */,
+				BE63B443457479C6C17079B0 /* Pods-RNChallengeMarina-RNChallengeMarinaTests.release.xcconfig */,
+				CCEC2C2DCE322AD71BB73268 /* Pods-RNChallengeMarina-tvOS.debug.xcconfig */,
+				E3598745C1E6CD8322A0BA74 /* Pods-RNChallengeMarina-tvOS.release.xcconfig */,
+				730F7183C610CB5D0F4AD96C /* Pods-RNChallengeMarina-tvOSTests.debug.xcconfig */,
+				C137AADFE8AD9B953798A855 /* Pods-RNChallengeMarina-tvOSTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -180,7 +180,7 @@
 				00E356EF1AD99517003FC87E /* RNChallengeMarinaTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				5AFF26180504915B22D5BAB5 /* Pods */,
+				71D2E5913AEFF921E301F9F8 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -205,11 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RNChallengeMarinaTests" */;
 			buildPhases = (
-				7221ECE18B907A546365FFF2 /* [CP] Check Pods Manifest.lock */,
+				3FF4E66C836B92DB5BE2C50C /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				D67CBD7CE0B3981AC59481FC /* [CP] Copy Pods Resources */,
+				B81380DC4082507745B2C341 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,13 +225,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RNChallengeMarina" */;
 			buildPhases = (
-				071DE01469EBBAF429302600 /* [CP] Check Pods Manifest.lock */,
+				68E8B0439A047CFCFA997411 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				F16E1EEE1372973F155172B3 /* [CP] Copy Pods Resources */,
+				10A419A9AAF4E3B327524DFA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,7 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "RNChallengeMarina-tvOS" */;
 			buildPhases = (
-				4ED256D16D84ACA427611FA7 /* [CP] Check Pods Manifest.lock */,
+				9701EB0305F6D9F5F160DD5D /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -266,7 +266,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "RNChallengeMarina-tvOSTests" */;
 			buildPhases = (
-				4A1255B27FF37F9E81D6E3D6 /* [CP] Check Pods Manifest.lock */,
+				52F8E1827538870D77FB2030 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -377,159 +377,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		071DE01469EBBAF429302600 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNChallengeMarina-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		4A1255B27FF37F9E81D6E3D6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNChallengeMarina-tvOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4ED256D16D84ACA427611FA7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNChallengeMarina-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7221ECE18B907A546365FFF2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNChallengeMarina-RNChallengeMarinaTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D67CBD7CE0B3981AC59481FC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNChallengeMarina-RNChallengeMarinaTests/Pods-RNChallengeMarina-RNChallengeMarinaTests-resources.sh",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNChallengeMarina-RNChallengeMarinaTests/Pods-RNChallengeMarina-RNChallengeMarinaTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F16E1EEE1372973F155172B3 /* [CP] Copy Pods Resources */ = {
+		10A419A9AAF4E3B327524DFA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -577,6 +425,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNChallengeMarina/Pods-RNChallengeMarina-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		3FF4E66C836B92DB5BE2C50C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNChallengeMarina-RNChallengeMarinaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52F8E1827538870D77FB2030 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNChallengeMarina-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68E8B0439A047CFCFA997411 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNChallengeMarina-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9701EB0305F6D9F5F160DD5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNChallengeMarina-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B81380DC4082507745B2C341 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RNChallengeMarina-RNChallengeMarinaTests/Pods-RNChallengeMarina-RNChallengeMarinaTests-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNChallengeMarina-RNChallengeMarinaTests/Pods-RNChallengeMarina-RNChallengeMarinaTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -672,7 +672,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E13D6FAB7ED706262110DF8 /* Pods-RNChallengeMarina-RNChallengeMarinaTests.debug.xcconfig */;
+			baseConfigurationReference = D38CFA82AAF7782A0855DAEA /* Pods-RNChallengeMarina-RNChallengeMarinaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -695,7 +695,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9CC8C960E459E6805659347 /* Pods-RNChallengeMarina-RNChallengeMarinaTests.release.xcconfig */;
+			baseConfigurationReference = BE63B443457479C6C17079B0 /* Pods-RNChallengeMarina-RNChallengeMarinaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -715,7 +715,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9E9DEC01E6850854BB80F27 /* Pods-RNChallengeMarina.debug.xcconfig */;
+			baseConfigurationReference = FD2FADBAC9D65DC060E5EF67 /* Pods-RNChallengeMarina.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -738,7 +738,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1E0A9DF46663FAB78C2DC4E /* Pods-RNChallengeMarina.release.xcconfig */;
+			baseConfigurationReference = EABDD7514C159F96C354E469 /* Pods-RNChallengeMarina.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -759,7 +759,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D24AB87C1254A8692934C1CE /* Pods-RNChallengeMarina-tvOS.debug.xcconfig */;
+			baseConfigurationReference = CCEC2C2DCE322AD71BB73268 /* Pods-RNChallengeMarina-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -787,7 +787,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 362DE6FDA9FAAEB9A78C78CF /* Pods-RNChallengeMarina-tvOS.release.xcconfig */;
+			baseConfigurationReference = E3598745C1E6CD8322A0BA74 /* Pods-RNChallengeMarina-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -815,7 +815,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DC5F48BA3FF2388F0B7A214 /* Pods-RNChallengeMarina-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 730F7183C610CB5D0F4AD96C /* Pods-RNChallengeMarina-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -842,7 +842,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF0F00BCCF8D533D4D17F7C9 /* Pods-RNChallengeMarina-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = C137AADFE8AD9B953798A855 /* Pods-RNChallengeMarina-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

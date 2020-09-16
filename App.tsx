@@ -1,20 +1,22 @@
-import React from 'react';
-import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
-import {Provider} from 'react-redux';
-
 import SearcherNavigator from './navigation/SearcherNavigation';
-import generateStore from './redux/store';
+import React from 'react';
+import {View, StatusBar, StyleSheet} from 'react-native';
+import {ApplicationProvider} from '@ui-kitten/components';
 
-const store = generateStore();
+import {client} from './apollo/apollo';
+import * as eva from '@eva-design/eva';
+import {ApolloProvider} from '@apollo/client';
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={styles.container}>
-        <SearcherNavigator />
-      </SafeAreaView>
-    </Provider>
+    <ApplicationProvider {...eva} theme={eva.light}>
+      <ApolloProvider client={client}>
+        <StatusBar barStyle="dark-content" />
+        <View style={styles.container}>
+          <SearcherNavigator />
+        </View>
+      </ApolloProvider>
+    </ApplicationProvider>
   );
 };
 

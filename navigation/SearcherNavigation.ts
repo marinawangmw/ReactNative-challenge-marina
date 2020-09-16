@@ -1,43 +1,58 @@
-import {Filter} from '../redux/searcher/searcher.types';
-import IntroductionScreen from '../screens/IntroductionScreen';
-import ItemDetailsScreen from '../screens/ItemDetailsScreen';
-import SearchScreen from '../screens/SearchScreen';
 import React from 'react';
 import {TabBarIOS} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 
-const FilterTabNavigator = createBottomTabNavigator({
-  Characters: {
-    screen: SearchScreen,
-    params: {
-      filter: Filter.characters,
+import {Filter} from '../types/types';
+import IntroductionScreen from '../screens/IntroductionScreen';
+import ItemDetailsScreen from '../screens/ItemDetailsScreen';
+import SearchScreen from '../screens/SearchScreen';
+
+const FilterTabNavigator = createBottomTabNavigator(
+  {
+    Characters: {
+      screen: SearchScreen,
+      params: {
+        filter: Filter.characters,
+      },
+    },
+    Locations: {
+      screen: SearchScreen,
+      params: {
+        filter: Filter.locations,
+      },
+    },
+    Episodes: {
+      screen: SearchScreen,
+      params: {
+        filter: Filter.episodes,
+      },
     },
   },
-  Locations: {
-    screen: SearchScreen,
-    params: {
-      filter: Filter.locations,
+  {
+    tabBarOptions: {
+      activeTintColor: '#58b1ff',
+      labelStyle: {
+        fontSize: 18,
+      },
     },
   },
-  Episodes: {
-    screen: SearchScreen,
-    params: {
-      filter: Filter.episodes,
-    },
-  },
-});
+);
 
 const RootNavigator = createStackNavigator(
   {
-    Introduction: IntroductionScreen,
+    Introduction: {
+      screen: IntroductionScreen,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
     Searcher: FilterTabNavigator,
     ItemDetails: ItemDetailsScreen,
   },
   {
     mode: 'modal',
-    headerMode: 'none',
   },
 );
 
