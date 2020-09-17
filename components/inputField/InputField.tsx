@@ -1,6 +1,6 @@
 import {Input} from '@ui-kitten/components';
 import * as React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import {Filter} from '../../types/types';
 
 interface InputFieldProps {

@@ -1,4 +1,4 @@
-import {InMemoryCache, ApolloClient} from '@apollo/client';
+import {ApolloClient, InMemoryCache} from '@apollo/client';
 
 export const client = new ApolloClient({
   uri: 'https://rickandmortyapi.com/graphql',
@@ -11,6 +11,7 @@ export const queries = {
       characters(page: $page, filter: {name: $name, type: $type}) {
         info {
           pages
+          next
         }
         results {
           id
@@ -27,7 +28,8 @@ export const queries = {
     query getCollection($name:String!,$type:String!, $page:Int!) {
         locations(page:$page,filter:{name:$name, type:$type}){
             info{
-                pages
+              pages
+              next
             }
             results{
                 id
@@ -44,7 +46,8 @@ export const queries = {
     query getCollection($name:String!, $page:Int!) {
         episodes(page:$page,filter:{name:$name}){
             info{
-                pages
+              pages
+              next
             }
             results{
                 id

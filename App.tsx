@@ -1,11 +1,10 @@
-import SearcherNavigator from './navigation/SearcherNavigation';
-import React from 'react';
-import {View, StatusBar, StyleSheet} from 'react-native';
-import {ApplicationProvider} from '@ui-kitten/components';
-
 import {client} from './apollo/apollo';
-import * as eva from '@eva-design/eva';
+import SearcherNavigator from './navigation/SearcherNavigation';
 import {ApolloProvider} from '@apollo/client';
+import * as eva from '@eva-design/eva';
+import {ApplicationProvider} from '@ui-kitten/components';
+import React from 'react';
+import {StatusBar, StyleSheet, View} from 'react-native';
 
 const App = () => {
   return (

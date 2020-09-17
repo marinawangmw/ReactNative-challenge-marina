@@ -1,13 +1,57 @@
-import * as React from 'react';
-import {View, StyleSheet, FlatList} from 'react-native';
+import React, {useState} from 'react';
+import {FlatList, StyleSheet, View} from 'react-native';
+
+import {Filter} from '../../types/types';
 import CardItem from '../card/CardItem';
 
 interface CollectionListProps {
-  collection: any;
+  data: any;
   navigation: any;
+  filter: Filter;
+  fetchMore: any;
 }
 
-const CollectionList = ({collection, navigation}: CollectionListProps) => {
+const CollectionList = ({
+  data,
+  navigation,
+  filter,
+  fetchMore,
+}: CollectionListProps) => {
+  const collection = data[filter].results;
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  const handleLoadMore = () => {
+    if (!hasScrolled) {
+      return null;
+    }
+
+    data[filter].info &&
+      data[filter].info.next &&
+      fetchMore({
+        variables: {
+          page: data[filter].info.next,
+        },
+        updateQuery: (prev: any, {fetchMoreResult}: any) => {
+          if (!fetchMoreResult) return prev;
+          return {
+            [filter]: {
+              __typename: fetchMoreResult[filter].__typename,
+              info: {...fetchMoreResult[filter].info},
+              results: [
+                ...prev[filter].results,
+                ...fetchMoreResult[filter].results,
+              ],
+            },
+          };
+        },
+      });
+    return null;
+  };
+
+  const onScroll = () => {
+    setHasScrolled(true);
+  };
+
   function renderItems(itemData: any) {
     const {name, image, dimension, episode} = itemData.item;
     return (
@@ -26,6 +70,8 @@ const CollectionList = ({collection, navigation}: CollectionListProps) => {
           keyExtractor={(item) => item.id.toString()}
           data={collection}
           renderItem={renderItems}
+          onScroll={onScroll}
+          onEndReached={handleLoadMore}
         />
       </View>
     );

@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {NavigationScreenProp} from 'react-navigation';
+
+import CollectionListContainer from '../components/collectionList/CollectionList.Container';
 import InputField from '../components/inputField/InputField';
 import {Filter} from '../types/types';
-import CollectionListContainer from '../components/collectionList/CollectionList.Container';
 
 interface SearchScreenProps {
   navigation: NavigationScreenProp<any>;

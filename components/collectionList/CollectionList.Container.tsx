@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
-import {gql, useQuery} from '@apollo/client';
+import {gql, QueryResult, useQuery} from '@apollo/client';
+import React from 'react';
 import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
+
 import {queries} from '../../apollo/apollo';
-import {Data, Filter} from '../../types/types';
+import {Filter} from '../../types/types';
 import CollectionList from './CollectionList.Component';
 
 interface CollectionsProps {
@@ -23,13 +24,16 @@ const CollectionListContainer = ({
   `;
 
   if (inputName.length > 2 || inputType.length > 2) {
-    const {loading, error, data} = useQuery(GET_COLLECTION, {
-      variables: {
-        name: inputName,
-        type: inputType,
-        page: 1,
+    const {loading, error, data, fetchMore}: QueryResult = useQuery(
+      GET_COLLECTION,
+      {
+        variables: {
+          name: inputName,
+          type: inputType,
+          page: 1,
+        },
       },
-    });
+    );
 
     if (loading)
       return (
@@ -46,19 +50,22 @@ const CollectionListContainer = ({
       );
 
     if (data) {
-      const collection: Data[] = data[filter].results;
-      return <CollectionList navigation={navigation} collection={collection} />;
+      return (
+        <CollectionList
+          filter={filter}
+          navigation={navigation}
+          fetchMore={fetchMore}
+          data={data}
+        />
+      );
     }
-
-    return null;
   }
-
   return null;
 };
 
 const styles = StyleSheet.create({
   messageContainer: {
-    flex: 1,
+    height: '50%',
     justifyContent: 'center',
     alignItems: 'center',
   },
