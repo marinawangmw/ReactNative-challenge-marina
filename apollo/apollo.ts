@@ -1,8 +1,17 @@
 import {ApolloClient, InMemoryCache} from '@apollo/client';
+import {relayStylePagination} from '@apollo/client/utilities';
 
 export const client = new ApolloClient({
   uri: 'https://rickandmortyapi.com/graphql',
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache(), //{
+  //   typePolicies: {
+  //     Query: {
+  //       fields: {
+  //         characters: relayStylePagination(['query']),
+  //       },
+  //     },
+  //   },
+  // }
 });
 
 export const queries = {
@@ -36,6 +45,7 @@ export const queries = {
                 name
                 dimension
                 residents{
+                    id
                     name
                     image
                 }
@@ -55,8 +65,9 @@ export const queries = {
                 air_date
                 episode
                 characters{
-                name
-                image
+                  id
+                  name
+                  image
                 }
             }
         }

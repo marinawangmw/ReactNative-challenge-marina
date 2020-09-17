@@ -6,7 +6,7 @@ interface CardWithoutImageProps {
   name: string;
   data?: string;
   imageURL?: string;
-  navigation: any;
+  navigation?: any;
 }
 
 const CardItem = ({
@@ -14,6 +14,7 @@ const CardItem = ({
   data,
   imageURL,
   navigation,
+  ...props
 }: CardWithoutImageProps) => {
   const renderImageCard = () => (
     <View style={styles.imageCardContent}>
@@ -40,7 +41,10 @@ const CardItem = ({
           onPress={() =>
             navigation.navigate({
               routeName: 'ItemDetails',
-              params: {item: name},
+              params: {
+                name,
+                item: props,
+              },
             })
           }>
           {imageURL ? renderImageCard() : renderTextCard()}
@@ -65,7 +69,7 @@ const styles = StyleSheet.create({
     width: '85%',
     height: 100,
     margin: 10,
-    borderRadius: 20,
+    borderRadius: 18,
   },
   textCardContent: {
     alignItems: 'center',
@@ -81,6 +85,7 @@ const styles = StyleSheet.create({
     height: 98,
     marginTop: -16,
     flex: 2,
+    marginLeft: -25,
   },
   imageCardContentRight: {
     height: 98,
@@ -90,7 +95,7 @@ const styles = StyleSheet.create({
     flex: 2,
   },
   cardName: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
     color: '#3A5268',
     textAlign: 'center',

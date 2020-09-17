@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   collectionContainer: {
-    flex: 4.2,
+    flex: 4.5,
     width: '100%',
   },
 });

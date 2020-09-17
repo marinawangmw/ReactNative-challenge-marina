@@ -9,7 +9,6 @@ interface InputFieldProps {
   input: string;
   handleInputChange: (text: string) => void;
   disabled?: boolean;
-  status: string;
 }
 
 const InputField = ({
@@ -25,6 +24,7 @@ const InputField = ({
         value={input}
         onChangeText={handleInputChange}
         style={styles.input}
+        status="basic"
         {...props}
       />
     </View>

@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 
-import {Filter} from '../../types/types';
+import {Data, Filter} from '../../types/types';
 import CardItem from '../card/CardItem';
 
 interface CollectionListProps {
-  data: any;
   navigation: any;
   filter: Filter;
+  data: any;
   fetchMore: any;
 }
 
@@ -60,29 +60,22 @@ const CollectionList = ({
         name={name}
         data={dimension || episode || null}
         imageURL={image || null}
+        {...itemData.item}
       />
     );
   }
   if (collection) {
     return (
-      <View style={styles.container}>
-        <FlatList
-          keyExtractor={(item) => item.id.toString()}
-          data={collection}
-          renderItem={renderItems}
-          onScroll={onScroll}
-          onEndReached={handleLoadMore}
-        />
-      </View>
+      <FlatList
+        keyExtractor={(item) => item.id.toString()}
+        data={collection}
+        renderItem={renderItems}
+        onScroll={onScroll}
+        onEndReached={handleLoadMore}
+      />
     );
   }
   return null;
 };
 
 export default CollectionList;
-
-const styles = StyleSheet.create({
-  container: {
-    marginBottom: 5,
-  },
-});

@@ -46,7 +46,12 @@ const RootNavigator = createStackNavigator(
         headerShown: false,
       },
     },
-    Searcher: FilterTabNavigator,
+    Searcher: {
+      screen: FilterTabNavigator,
+      navigationOptions: {
+        headerTitle: 'Rick & Morty Searcher',
+      },
+    },
     ItemDetails: ItemDetailsScreen,
   },
   {
