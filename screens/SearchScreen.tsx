@@ -29,6 +29,7 @@ const SearchScreen = ({navigation}: SearchScreenProps) => {
           placeholder="Search by type"
           input={inputType}
           handleInputChange={setInputType}
+          disabled={filter === Filter.episodes && true}
         />
       </View>
       <View style={styles.collectionContainer}>
