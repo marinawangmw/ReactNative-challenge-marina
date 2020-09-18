@@ -31,19 +31,6 @@ const CollectionList = ({
         variables: {
           page: data[filter].info.next,
         },
-        updateQuery: (prev: any, {fetchMoreResult}: any) => {
-          if (!fetchMoreResult) return prev;
-          return {
-            [filter]: {
-              __typename: fetchMoreResult[filter].__typename,
-              info: {...fetchMoreResult[filter].info},
-              results: [
-                ...prev[filter].results,
-                ...fetchMoreResult[filter].results,
-              ],
-            },
-          };
-        },
       });
     return null;
   };

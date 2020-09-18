@@ -39,6 +39,7 @@ const CardItem = ({
         <Card
           style={styles.card}
           onPress={() =>
+            navigation &&
             navigation.navigate({
               routeName: 'ItemDetails',
               params: {
