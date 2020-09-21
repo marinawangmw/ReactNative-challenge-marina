@@ -3,11 +3,11 @@ import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 
 import {Filter} from '../types/types';
-import IntroductionScreen from '../screens/IntroductionScreen';
-import ItemDetailsScreen from '../screens/ItemDetailsScreen';
-import SearchScreen from '../screens/SearchScreen';
+import IntroductionScreen from '../screens/introductionScreen/IntroductionScreen';
+import ItemDetailsScreen from '../screens/itemDetailScreen/ItemDetailsScreen';
+import SearchScreen from '../screens/searchScreen/SearchScreen';
 
-const FilterTabNavigator = createBottomTabNavigator( 
+const FilterTabNavigator = createBottomTabNavigator(
   {
     Characters: {
       screen: SearchScreen,

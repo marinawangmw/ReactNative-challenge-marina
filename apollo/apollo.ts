@@ -1,4 +1,6 @@
 import {ApolloClient, InMemoryCache, makeVar} from '@apollo/client';
+import {NavigationScreenProp} from 'react-navigation';
+import {Filter} from '../types/types';
 
 const initialCacheData = {
   __typename: '',
@@ -10,9 +12,11 @@ export const isScrolling = makeVar(false);
 
 export const isTyping = makeVar(false);
 
-export const isFetchingMore = makeVar(false);
+export const filter = makeVar(Filter.characters);
 
-const mergeDataInCacheFromApi = (incoming: any, existing: any) => {
+export const navReference = makeVar<NavigationScreenProp<any>>(null);
+
+const mergeDataInCacheFromApi = (existing: any, incoming: any) => {
   if (isTyping()) {
     return incoming;
   }
@@ -33,17 +37,7 @@ export const cache = new InMemoryCache({
         characters: {
           keyArgs: ['filter'],
           merge(existing = initialCacheData, incoming) {
-            if (isTyping()) {
-              return incoming;
-            }
-            if (isScrolling()) {
-              const {results: newCharacters} = incoming;
-              const {results: oldCharacters} = existing;
-              return {
-                info: incoming.info,
-                results: [...oldCharacters, ...newCharacters],
-              };
-            }
+            return mergeDataInCacheFromApi(existing, incoming);
           },
           read(characters) {
             return characters;
@@ -52,17 +46,7 @@ export const cache = new InMemoryCache({
         locations: {
           keyArgs: ['filter'],
           merge(existing = initialCacheData, incoming) {
-            if (isTyping()) {
-              return incoming;
-            }
-            if (isScrolling()) {
-              const {results: newLocations} = incoming;
-              const {results: oldLocations} = existing;
-              return {
-                info: incoming.info,
-                results: [...oldLocations, ...newLocations],
-              };
-            }
+            return mergeDataInCacheFromApi(existing, incoming);
           },
           read(locations) {
             return locations;
@@ -71,17 +55,7 @@ export const cache = new InMemoryCache({
         episodes: {
           keyArgs: ['filter'],
           merge(existing = initialCacheData, incoming) {
-            if (isTyping()) {
-              return incoming;
-            }
-            if (isScrolling()) {
-              const {results: newEpisodes} = incoming;
-              const {results: oldEpisodes} = existing;
-              return {
-                info: incoming.info,
-                results: [...oldEpisodes, ...newEpisodes],
-              };
-            }
+            return mergeDataInCacheFromApi(existing, incoming);
           },
           read(episodes) {
             return episodes;

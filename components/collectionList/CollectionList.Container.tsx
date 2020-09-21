@@ -1,26 +1,21 @@
 import {gql, useQuery} from '@apollo/client';
 import React from 'react';
-import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
+import {ActivityIndicator, Text, View} from 'react-native';
+import styles from './CollectionList.styles';
 
-import {queries} from '../../apollo/apollo';
-import {Filter} from '../../types/types';
+import {queries, filter} from '../../apollo/apollo';
 import CollectionList from './CollectionList.Component';
 
 interface CollectionsProps {
   inputName: string;
   inputType: string;
-  filter: Filter;
-  navigation: any;
 }
 
-const CollectionListContainer = ({
-  inputName,
-  inputType,
-  filter,
-  navigation,
-}: CollectionsProps) => {
+const CollectionListContainer = ({inputName, inputType}: CollectionsProps) => {
+  const selectedFilter = filter();
+
   const GET_COLLECTION = gql`
-    ${queries[filter]}
+    ${queries[selectedFilter]}
   `;
   if (inputName.length > 2 || inputType.length > 2) {
     const {loading, error, data, fetchMore} = useQuery(GET_COLLECTION, {
@@ -48,8 +43,6 @@ const CollectionListContainer = ({
     if (data) {
       return (
         <CollectionList
-          filter={filter}
-          navigation={navigation}
           fetchMore={fetchMore}
           data={data}
           inputName={inputName}
@@ -60,17 +53,5 @@ const CollectionListContainer = ({
   }
   return null;
 };
-
-const styles = StyleSheet.create({
-  messageContainer: {
-    height: '50%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  errorText: {
-    fontSize: 20,
-    color: '#3A5268',
-  },
-});
 
 export default CollectionListContainer;

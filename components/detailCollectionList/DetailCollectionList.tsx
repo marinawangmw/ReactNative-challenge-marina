@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import {Characters} from '../../types/types';
 import CardItem from '../card/CardItem';

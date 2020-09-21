@@ -1,8 +1,9 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
+import styles from './ItemDetailsScreen.styles';
 import {NavigationScreenProp} from 'react-navigation';
-import DataRow from '../components/dataRow/DataRow';
-import DetailCollectionList from '../components/smallCollectionList/DetailCollectionList';
+import DataRow from '../../components/dataRow/DataRow';
+import DetailCollectionList from '../../components/detailCollectionList/DetailCollectionList';
 
 interface ItemDetailsScreenProps {
   navigation: NavigationScreenProp<any>;
@@ -28,7 +29,7 @@ const ItemDetailsScreen = (props: ItemDetailsScreenProps) => {
       <View style={styles.imageContainer}>
         <Image source={{uri: image}} style={styles.image} />
       </View>
-      <View style={styles.content}>
+      <View style={styles.contentImageCard}>
         <View style={styles.nameContainer}>
           <Text style={styles.nameText}>{name}</Text>
         </View>
@@ -41,7 +42,7 @@ const ItemDetailsScreen = (props: ItemDetailsScreenProps) => {
 
   const renderTextDetails = () => (
     <>
-      <View style={styles.content}>
+      <View style={styles.contentTextCard}>
         <View style={styles.nameContainer}>
           <Text style={styles.nameText}>{name}</Text>
         </View>
@@ -60,11 +61,7 @@ const ItemDetailsScreen = (props: ItemDetailsScreenProps) => {
       </View>
     </>
   );
-  return (
-    <View style={styles.container}>
-      {image ? renderImageDetails() : renderTextDetails()}
-    </View>
-  );
+  return <>{image ? renderImageDetails() : renderTextDetails()}</>;
 };
 
 ItemDetailsScreen.navigationOptions = () => {
@@ -74,43 +71,3 @@ ItemDetailsScreen.navigationOptions = () => {
 };
 
 export default ItemDetailsScreen;
-
-const styles = StyleSheet.create({
-  container: {},
-  imageContainer: {
-    height: 300,
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 20,
-    shadowColor: '#58b1ff',
-    shadowOpacity: 0.3,
-    shadowOffset: {width: 0, height: 2},
-    shadowRadius: 5,
-  },
-  nameContainer: {
-    marginBottom: 20,
-  },
-  nameText: {
-    fontSize: 35,
-    color: '#3A5268',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  image: {
-    height: '95%',
-    width: '80%',
-    borderRadius: 50,
-  },
-  content: {
-    marginVertical: 30,
-    paddingHorizontal: 20,
-    paddingTop: 30,
-    backgroundColor: 'white',
-    height: '90%',
-  },
-  noCharactersText: {
-    fontSize: 20,
-    color: '#3A5268',
-  },
-});
