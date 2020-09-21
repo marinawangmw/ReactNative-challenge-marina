@@ -4,7 +4,8 @@ import {ApolloProvider} from '@apollo/client';
 import * as eva from '@eva-design/eva';
 import {ApplicationProvider} from '@ui-kitten/components';
 import React from 'react';
-import {StatusBar, StyleSheet, View} from 'react-native';
+import {StatusBar, View} from 'react-native';
+import styles from './App.styles';
 
 const App = () => {
   return (
@@ -18,11 +19,5 @@ const App = () => {
     </ApplicationProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;

@@ -36,8 +36,7 @@ const SearchScreen = ({navigation}: SearchScreenProps) => {
     setInputName('');
     setInputType('');
     isScrolling(false);
-    //setting typing in true will clean the cache
-    isTyping(true);
+    isTyping(true); //setting is typing in true will clean the cache
   };
 
   return (

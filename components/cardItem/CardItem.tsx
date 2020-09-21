@@ -35,6 +35,7 @@ const CardItem = ({
       <Text style={{color: '#3A5268'}}>{data}</Text>
     </View>
   );
+
   if (name)
     return (
       <View style={styles.cardContainer}>
