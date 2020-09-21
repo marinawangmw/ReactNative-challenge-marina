@@ -1,4 +1,4 @@
-import {gql, QueryResult, useQuery} from '@apollo/client';
+import {gql, useQuery} from '@apollo/client';
 import React from 'react';
 import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
 
@@ -22,18 +22,14 @@ const CollectionListContainer = ({
   const GET_COLLECTION = gql`
     ${queries[filter]}
   `;
-
   if (inputName.length > 2 || inputType.length > 2) {
-    const {loading, error, data, fetchMore}: QueryResult = useQuery(
-      GET_COLLECTION,
-      {
-        variables: {
-          name: inputName,
-          type: inputType,
-          page: 1,
-        },
+    const {loading, error, data, fetchMore} = useQuery(GET_COLLECTION, {
+      variables: {
+        name: inputName,
+        type: inputType,
+        page: 1,
       },
-    );
+    });
 
     if (loading)
       return (
@@ -56,6 +52,8 @@ const CollectionListContainer = ({
           navigation={navigation}
           fetchMore={fetchMore}
           data={data}
+          inputName={inputName}
+          inputType={inputType}
         />
       );
     }

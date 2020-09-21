@@ -5,6 +5,7 @@ import {NavigationScreenProp} from 'react-navigation';
 import CollectionListContainer from '../components/collectionList/CollectionList.Container';
 import InputField from '../components/inputField/InputField';
 import {Filter} from '../types/types';
+import {cache, isScrolling, isTyping} from '../apollo/apollo';
 
 interface SearchScreenProps {
   navigation: NavigationScreenProp<any>;
@@ -15,6 +16,19 @@ const SearchScreen = ({navigation}: SearchScreenProps) => {
   const [inputName, setInputName] = useState('');
   const [inputType, setInputType] = useState('');
 
+  const handleInputName = (name: string) => {
+    setInputName(name);
+    isScrolling(false);
+    isTyping(true);
+    cache.evict({});
+  };
+
+  const handleInputType = (type: string) => {
+    setInputType(type);
+    isScrolling(false);
+    isTyping(true);
+  };
+
   return (
     <View style={styles.screen}>
       <View style={styles.inputContainer}>
@@ -22,13 +36,13 @@ const SearchScreen = ({navigation}: SearchScreenProps) => {
           filter={filter}
           placeholder="Search by name"
           input={inputName}
-          handleInputChange={setInputName}
+          handleInputChange={handleInputName}
         />
         <InputField
           filter={filter}
           placeholder="Search by type"
           input={inputType}
-          handleInputChange={setInputType}
+          handleInputChange={handleInputType}
           disabled={filter === Filter.episodes && true}
         />
       </View>

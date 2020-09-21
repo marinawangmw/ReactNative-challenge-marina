@@ -1,61 +1,100 @@
-import {ApolloClient, InMemoryCache} from '@apollo/client';
-import {
-  concatPagination,
-  offsetLimitPagination,
-  Reference,
-  relayStylePagination,
-} from '@apollo/client/utilities';
+import {ApolloClient, InMemoryCache, makeVar} from '@apollo/client';
 
-const initialCharacters = {
-  __typename: {
-    info: {},
-    results: [],
-  },
+const initialCacheData = {
+  __typename: '',
+  info: {},
+  results: [],
 };
 
-export const client = new ApolloClient({
-  uri: 'https://rickandmortyapi.com/graphql',
-  cache: new InMemoryCache({
-    typePolicies: {
-      Query: {
-        fields: {
-          characters: {
-            keyArgs: false,
-            merge(existing = {results: []}, incoming) {
+export const isScrolling = makeVar(false);
+
+export const isTyping = makeVar(false);
+
+export const isFetchingMore = makeVar(false);
+
+const mergeDataInCacheFromApi = (incoming: any, existing: any) => {
+  if (isTyping()) {
+    return incoming;
+  }
+  if (isScrolling()) {
+    const {results: newCharacters} = incoming;
+    const {results: oldCharacters} = existing;
+    return {
+      info: incoming.info,
+      results: [...oldCharacters, ...newCharacters],
+    };
+  }
+};
+
+export const cache = new InMemoryCache({
+  typePolicies: {
+    Query: {
+      fields: {
+        characters: {
+          keyArgs: ['filter'],
+          merge(existing = initialCacheData, incoming) {
+            if (isTyping()) {
+              return incoming;
+            }
+            if (isScrolling()) {
               const {results: newCharacters} = incoming;
               const {results: oldCharacters} = existing;
               return {
-                ...incoming,
+                info: incoming.info,
                 results: [...oldCharacters, ...newCharacters],
               };
-            },
+            }
           },
-          locations: {
-            keyArgs: false,
-            merge(existing = {results: []}, incoming) {
+          read(characters) {
+            return characters;
+          },
+        },
+        locations: {
+          keyArgs: ['filter'],
+          merge(existing = initialCacheData, incoming) {
+            if (isTyping()) {
+              return incoming;
+            }
+            if (isScrolling()) {
               const {results: newLocations} = incoming;
               const {results: oldLocations} = existing;
               return {
-                ...incoming,
+                info: incoming.info,
                 results: [...oldLocations, ...newLocations],
               };
-            },
+            }
           },
-          episodes: {
-            keyArgs: false,
-            merge(existing = {results: []}, incoming) {
-              const {results: newEpisides} = incoming;
+          read(locations) {
+            return locations;
+          },
+        },
+        episodes: {
+          keyArgs: ['filter'],
+          merge(existing = initialCacheData, incoming) {
+            if (isTyping()) {
+              return incoming;
+            }
+            if (isScrolling()) {
+              const {results: newEpisodes} = incoming;
               const {results: oldEpisodes} = existing;
               return {
-                ...incoming,
-                results: [...oldEpisodes, ...newEpisides],
+                info: incoming.info,
+                results: [...oldEpisodes, ...newEpisodes],
               };
-            },
+            }
+          },
+          read(episodes) {
+            return episodes;
           },
         },
       },
     },
-  }),
+  },
+});
+
+export const client = new ApolloClient({
+  uri: 'https://rickandmortyapi.com/graphql',
+  cache,
 });
 
 export const queries = {

@@ -1,14 +1,17 @@
-import React, {useState} from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
+import React from 'react';
+import {FlatList} from 'react-native';
 
-import {Data, Filter} from '../../types/types';
+import {Filter} from '../../types/types';
 import CardItem from '../card/CardItem';
+import {isScrolling, isTyping, isFetchingMore} from '../../apollo/apollo';
 
 interface CollectionListProps {
   navigation: any;
   filter: Filter;
   data: any;
   fetchMore: any;
+  inputName: string;
+  inputType: string;
 }
 
 const CollectionList = ({
@@ -16,27 +19,34 @@ const CollectionList = ({
   navigation,
   filter,
   fetchMore,
+  inputName,
+  inputType,
 }: CollectionListProps) => {
   const collection = data[filter].results;
-  const [hasScrolled, setHasScrolled] = useState(false);
 
   const handleLoadMore = () => {
-    if (!hasScrolled) {
+    if (!isScrolling()) {
       return null;
     }
 
-    data[filter].info &&
-      data[filter].info.next &&
-      fetchMore({
-        variables: {
-          page: data[filter].info.next,
-        },
-      });
+    if (data[filter].info) {
+      if (data[filter].info.next) {
+        isFetchingMore(true);
+        fetchMore({
+          variables: {
+            page: data[filter].info.next,
+            name: inputName,
+            type: inputType,
+          },
+        }).catch((error: any) => console.log('Error fetchmore', error.message));
+      }
+    }
     return null;
   };
 
   const onScroll = () => {
-    setHasScrolled(true);
+    isScrolling(true);
+    isTyping(false);
   };
 
   function renderItems(itemData: any) {
@@ -59,6 +69,7 @@ const CollectionList = ({
         renderItem={renderItems}
         onScroll={onScroll}
         onEndReached={handleLoadMore}
+        onEndReachedThreshold={0}
       />
     );
   }

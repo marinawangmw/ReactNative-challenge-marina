@@ -7,7 +7,7 @@ import IntroductionScreen from '../screens/IntroductionScreen';
 import ItemDetailsScreen from '../screens/ItemDetailsScreen';
 import SearchScreen from '../screens/SearchScreen';
 
-const FilterTabNavigator = createBottomTabNavigator(
+const FilterTabNavigator = createBottomTabNavigator( 
   {
     Characters: {
       screen: SearchScreen,
