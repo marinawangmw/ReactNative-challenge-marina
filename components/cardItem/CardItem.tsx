@@ -8,9 +8,16 @@ interface CardWithoutImageProps {
   name: string;
   data?: string;
   imageURL?: string;
+  renderMoreDetail: boolean;
 }
 
-const CardItem = ({name, data, imageURL, ...props}: CardWithoutImageProps) => {
+const CardItem = ({
+  name,
+  data,
+  imageURL,
+  renderMoreDetail,
+  ...props
+}: CardWithoutImageProps) => {
   const renderImageCard = () => (
     <View style={styles.imageCardContent}>
       <View style={styles.imageCardContentLeft}>
@@ -34,7 +41,7 @@ const CardItem = ({name, data, imageURL, ...props}: CardWithoutImageProps) => {
         <Card
           style={styles.card}
           onPress={() =>
-            navReference() &&
+            renderMoreDetail &&
             navReference().navigate({
               routeName: 'ItemDetails',
               params: {

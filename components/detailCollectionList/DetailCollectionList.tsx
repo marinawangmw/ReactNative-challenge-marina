@@ -9,7 +9,11 @@ interface DetailCollectionListProps {
 
 const DetailCollectionList = ({collection}: DetailCollectionListProps) => {
   const renderCollection = (itemData: any) => (
-    <CardItem imageURL={itemData.item.image} name={itemData.item.name} />
+    <CardItem
+      imageURL={itemData.item.image}
+      name={itemData.item.name}
+      renderMoreDetail={false}
+    />
   );
 
   return (

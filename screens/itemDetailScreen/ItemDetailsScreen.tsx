@@ -44,7 +44,7 @@ const ItemDetailsScreen = (props: ItemDetailsScreenProps) => {
     <>
       <View
         style={
-          smallCollection[0] && !smallCollection[0].id
+          smallCollection && !smallCollection[0].id
             ? {...styles.contentTextCard}
             : {...styles.contentTextCard, height: '90%'}
         }>
@@ -58,9 +58,9 @@ const ItemDetailsScreen = (props: ItemDetailsScreenProps) => {
           {dimension || episode}
         </DataRow>
         <DataRow title={dimension ? 'Residents' : 'Characters'}>
-          {!smallCollection[0].id && 'None'}
+          {smallCollection && !smallCollection[0].id && 'None'}
         </DataRow>
-        {smallCollection[0].id && (
+        {smallCollection && smallCollection[0].id && (
           <DetailCollectionList collection={smallCollection.slice(0, 5)} />
         )}
       </View>

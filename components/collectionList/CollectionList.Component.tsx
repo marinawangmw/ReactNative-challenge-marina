@@ -18,7 +18,6 @@ const CollectionList = ({
   inputType,
 }: CollectionListProps) => {
   const selectedFilter = filter();
-  const collection = data[selectedFilter].results;
 
   const handleLoadMore = () => {
     if (!isScrolling()) {
@@ -51,15 +50,16 @@ const CollectionList = ({
         name={name}
         data={dimension || episode || null}
         imageURL={image || null}
+        renderMoreDetail={true}
         {...itemData.item}
       />
     );
   }
-  if (collection) {
+  if (data) {
     return (
       <FlatList
         keyExtractor={(item) => item.id.toString()}
-        data={collection}
+        data={data[selectedFilter].results}
         renderItem={renderItems}
         onScroll={onScroll}
         onEndReached={handleLoadMore}
