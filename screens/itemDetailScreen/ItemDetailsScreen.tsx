@@ -44,7 +44,7 @@ const ItemDetailsScreen = (props: ItemDetailsScreenProps) => {
     <>
       <View
         style={
-          !smallCollection[0].id
+          smallCollection[0] && !smallCollection[0].id
             ? {...styles.contentTextCard}
             : {...styles.contentTextCard, height: '90%'}
         }>
