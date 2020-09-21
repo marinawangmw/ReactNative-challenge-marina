@@ -1,6 +1,4 @@
 ---
-
-
 ---
 
 <p>Hi there, I’m Marina! 👋</p>
@@ -43,10 +41,20 @@
 <p>Hooray! And it is running! 🌹</p>
 <h1 id="🕵️‍♀️-what-you-can-do-with-this-app">🕵️‍♀️ What you can do with this app</h1>
 <p>The app consists of three screens:<br>
+<br>
 <strong>Introduction Screen</strong><br>
 Simply press the enter button to discover more~</p>
+<img src="./asset/introduction_screen.png" alt="introduction" width="180" >
+<br>
+<br>
 <p><strong>Search Screen</strong><br>
 The searcher will start looking for matching results from the third character typed in.</p>
+<img src="./asset/search_screen.png" alt="introduction" width="180" >
+<br>
+<br>
 <p><strong>Details Screen</strong><br>
 When any result card is pressed, a modal will open providing more details about the selected item.</p>
-
+<img src="./asset/item_details_screen.png" alt="introduction" width="180" >
+<br>
+<br>
+<p><strong>Have fun!</strong> 🥳</p>
