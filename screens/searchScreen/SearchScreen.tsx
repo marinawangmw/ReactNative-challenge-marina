@@ -7,6 +7,7 @@ import CollectionListContainer from '../../components/collectionList/CollectionL
 import InputField from '../../components/inputField/InputField';
 import {Filter} from '../../types/types';
 import {isScrolling, isTyping, navReference, filter} from '../../apollo/apollo';
+import {Button} from '@ui-kitten/components';
 
 interface SearchScreenProps {
   navigation: NavigationScreenProp<any>;
@@ -31,6 +32,14 @@ const SearchScreen = ({navigation}: SearchScreenProps) => {
     isTyping(true);
   };
 
+  const handleResetInput = () => {
+    setInputName('');
+    setInputType('');
+    isScrolling(false);
+    //setting typing in true will clean the cache
+    isTyping(true);
+  };
+
   return (
     <View style={styles.screen}>
       <View style={styles.inputContainer}>
@@ -45,6 +54,13 @@ const SearchScreen = ({navigation}: SearchScreenProps) => {
           handleInputChange={handleInputType}
           disabled={filter() === Filter.episodes && true}
         />
+        <Button
+          onPress={handleResetInput}
+          appearance="ghost"
+          status="info"
+          style={styles.button}>
+          CLEAR ALL
+        </Button>
       </View>
       <View style={styles.collectionContainer}>
         <CollectionListContainer

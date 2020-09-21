@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlatList} from 'react-native';
 import {filter} from '../../apollo/apollo';
-import CardItem from '../card/CardItem';
+import CardItem from '../cardItem/CardItem';
 import {isScrolling, isTyping} from '../../apollo/apollo';
 
 interface CollectionListProps {

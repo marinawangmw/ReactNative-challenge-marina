@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {FlatList} from 'react-native-gesture-handler';
 import {Characters} from '../../types/types';
-import CardItem from '../card/CardItem';
+import CardItem from '../cardItem/CardItem';
 
 interface DetailCollectionListProps {
   collection: Characters[];

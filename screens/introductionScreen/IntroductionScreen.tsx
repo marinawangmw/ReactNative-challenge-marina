@@ -27,7 +27,6 @@ const IntroductionScreen = (props: IntroductionScreenProps) => {
             props.navigation.replace('Searcher');
           }}
           status="basic"
-          style={styles.bottom_button}
           size="giant">
           Enter
         </Button>

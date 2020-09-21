@@ -11,8 +11,11 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   collectionContainer: {
-    flex: 4.5,
+    flex: 4,
     width: '100%',
+  },
+  button: {
+    // margin: 10,
   },
 });
 

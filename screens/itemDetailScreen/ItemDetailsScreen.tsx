@@ -42,7 +42,12 @@ const ItemDetailsScreen = (props: ItemDetailsScreenProps) => {
 
   const renderTextDetails = () => (
     <>
-      <View style={styles.contentTextCard}>
+      <View
+        style={
+          !smallCollection[0].id
+            ? {...styles.contentTextCard}
+            : {...styles.contentTextCard, height: '90%'}
+        }>
         <View style={styles.nameContainer}>
           <Text style={styles.nameText}>{name}</Text>
         </View>

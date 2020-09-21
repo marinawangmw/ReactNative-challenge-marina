@@ -29,9 +29,8 @@ const styles = StyleSheet.create({
   contentTextCard: {
     marginVertical: 30,
     paddingHorizontal: 20,
-    paddingTop: 30,
+    paddingVertical: 30,
     backgroundColor: 'white',
-    height: '90%',
   },
   contentImageCard: {
     marginVertical: 30,

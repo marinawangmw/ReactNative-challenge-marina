@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   top_image: {
-    height: 100,
-    width: 100,
+    height: 150,
+    width: 150,
     margin: 20,
   },
   top_content: {
@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
     flex: 0.4,
     justifyContent: 'flex-end',
   },
-  bottom_button: {},
   bottom_date: {
     fontSize: 18,
     textAlign: 'center',
