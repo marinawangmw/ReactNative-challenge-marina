@@ -2,11 +2,11 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   imageContainer: {
-    height: 300,
+    height: 320,
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 50,
     shadowColor: '#58b1ff',
     shadowOpacity: 0.3,
     shadowOffset: {width: 0, height: 2},
