@@ -51,7 +51,7 @@ const SearchScreen = ({navigation}: SearchScreenProps) => {
           placeholder="Search by type"
           input={inputType}
           handleInputChange={handleInputType}
-          disabled={filter() === Filter.episodes && true}
+          disabled={filter() === Filter.episodes}
         />
         <Button
           onPress={handleResetInput}
