@@ -2,6 +2,7 @@ import React from 'react';
 import {Image, Text, View} from 'react-native';
 import styles from './IntroductionScreen.styles';
 import {Button} from '@ui-kitten/components';
+import logo from '../../asset/logo.png';
 
 interface IntroductionScreenProps {
   navigation: any;
@@ -13,10 +14,7 @@ const IntroductionScreen = (props: IntroductionScreenProps) => {
     <View style={styles.container}>
       <View style={styles.top}>
         <View style={styles.top_content}>
-          <Image
-            source={require('../../asset/logo.png')}
-            style={styles.top_image}
-          />
+          <Image source={logo} style={styles.top_image} />
           <Text style={styles.title}>REACT NATIVE CHALLENGE</Text>
           <Text style={styles.subtitle}>Marina Wang</Text>
         </View>
