@@ -10,6 +10,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#3A5268',
   },
+  loadingMessage: {
+    margin: 50,
+  },
 });
 
 export default styles;

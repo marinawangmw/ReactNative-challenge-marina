@@ -29,7 +29,7 @@ const CollectionListContainer = ({inputName, inputType}: CollectionsProps) => {
     if (loading)
       return (
         <View style={styles.messageContainer}>
-          <ActivityIndicator size="large" style={{margin: 50}} />
+          <ActivityIndicator size="large" style={styles.loadingMessage} />
         </View>
       );
 

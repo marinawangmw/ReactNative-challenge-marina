@@ -21,6 +21,9 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  textCardText: {
+    color: '#3A5268',
+  },
   imageCardContent: {
     flexDirection: 'row',
     flex: 1,

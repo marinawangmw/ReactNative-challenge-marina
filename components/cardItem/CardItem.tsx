@@ -32,7 +32,7 @@ const CardItem = ({
   const renderTextCard = () => (
     <View style={styles.textCardContent}>
       <Text style={styles.cardName}>{name}</Text>
-      <Text style={{color: '#3A5268'}}>{data}</Text>
+      <Text style={styles.textCardText}>{data}</Text>
     </View>
   );
 
