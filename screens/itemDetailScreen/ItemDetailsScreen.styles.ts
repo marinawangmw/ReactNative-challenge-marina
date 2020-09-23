@@ -42,6 +42,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#3A5268',
   },
+  containerWithCollection: {
+    height: '90%',
+  },
 });
 
 export default styles;
