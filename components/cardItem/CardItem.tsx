@@ -36,21 +36,21 @@ const CardItem = ({
     </View>
   );
 
+  const handlePressCard = () => {
+    renderMoreDetail &&
+      navReference().navigate({
+        routeName: 'ItemDetails',
+        params: {
+          name,
+          item: props,
+        },
+      });
+  };
+
   if (name)
     return (
       <View style={styles.cardContainer}>
-        <Card
-          style={styles.card}
-          onPress={() =>
-            renderMoreDetail &&
-            navReference().navigate({
-              routeName: 'ItemDetails',
-              params: {
-                name,
-                item: props,
-              },
-            })
-          }>
+        <Card style={styles.card} onPress={handlePressCard}>
           {imageURL ? renderImageCard() : renderTextCard()}
         </Card>
       </View>
