@@ -21,9 +21,7 @@ const IntroductionScreen = (props: IntroductionScreenProps) => {
       </View>
       <View style={styles.bottom}>
         <Button
-          onPress={() => {
-            props.navigation.replace('Searcher');
-          }}
+          onPress={() => props.navigation.replace('Searcher')}
           status="basic"
           size="giant">
           Enter
