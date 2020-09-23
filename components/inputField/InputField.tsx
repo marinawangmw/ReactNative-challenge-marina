@@ -1,5 +1,5 @@
 import {Input} from '@ui-kitten/components';
-import * as React from 'react';
+import React from 'react';
 import {View} from 'react-native';
 import styles from './InputField.styles';
 
@@ -14,7 +14,7 @@ const InputField = ({
   placeholder,
   input,
   handleInputChange,
-  ...props
+  disabled,
 }: InputFieldProps) => {
   return (
     <View style={styles.size}>
@@ -22,11 +22,9 @@ const InputField = ({
         placeholder={placeholder}
         value={input}
         onChangeText={handleInputChange}
-        style={
-          props.disabled ? {...styles.size} : {...styles.input, ...styles.size}
-        }
+        style={disabled ? styles.size : [styles.input, styles.size]}
         status="basic"
-        {...props}
+        disabled={disabled}
       />
     </View>
   );
